@@ -3,22 +3,20 @@ const Landing = () => {
     <div>
       <div className="mt-2">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div className="flex justify-center">
-            <img src={"/chess.jpeg"} className="max-w-96" />
+          <div>
+            <img src={"/chess.jpeg"} />
           </div>
           <div>
+            {" "}
             <h1 className="text-4xl font-bold">
               Play Chess Online on the #naughty Site!
             </h1>
             <button
               type="button"
-              className="grid grid-flow-col bg-green-500 hover:bg-green-700 content-center text-justify text-2xl text-white font-bold p-2 px-4 rounded "
+              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded me-2 mb-2"
             >
-              <img
-                className="object-center h-10 w-10 max-w-lg"
-                src={"/pawn.svg"}
-              />
-              Play Online
+              <img src={"/pawn.svg"} />
+              Play with{" "}
             </button>
           </div>
         </div>
