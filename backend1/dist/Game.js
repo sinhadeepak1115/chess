@@ -20,7 +20,6 @@ class Game {
         }));
     }
     makeMove(socket, move) {
-        console.log(this.board.moves().length);
         if (this.moveCount % 2 === 0 && socket !== this.player1) {
             console.log("player1");
             return;
