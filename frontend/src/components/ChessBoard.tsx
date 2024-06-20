@@ -28,6 +28,7 @@ const ChessBoard = ({
               const squareRepesenation = (String.fromCharCode(97 + j) +
                 "" +
                 (8 - i)) as Square;
+
               return (
                 <div
                   onClick={() => {
@@ -38,8 +39,10 @@ const ChessBoard = ({
                         JSON.stringify({
                           type: MOVE,
                           payload: {
-                            from,
-                            to: squareRepesenation,
+                            move: {
+                              from,
+                              to: squareRepesenation,
+                            },
                           },
                         }),
                       );

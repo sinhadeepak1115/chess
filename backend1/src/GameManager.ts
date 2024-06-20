@@ -36,11 +36,14 @@ export class GameManager {
         }
       }
       if (message.type === MOVE) {
+        console.log("inside MOVE");
         const game = this.games.find(
           (game) => game.player1 === socket || game.player2 === socket,
         );
         if (game) {
-          game.makeMove(socket, message.move);
+          console.log("inside game");
+          game.makeMove(socket, message.payload.move);
+          console.log(message.payload.move);
         }
       }
     });
