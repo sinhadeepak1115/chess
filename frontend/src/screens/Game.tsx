@@ -46,9 +46,14 @@ const Game = () => {
         <div className="grid grid-cols-6 gap-4 w-full ">
           <div className="col-span-4  w-full flex justify-center">
             {/* chessboard */}
-            <ChessBoard board={board} />
+            <ChessBoard
+              chess={chess}
+              socket={socket}
+              board={board}
+              setBoard={setBoard}
+            />
           </div>
-          <div className="col-span-2  w-full">
+          <div className="col-span-2 w-full">
             <Button
               onClick={() => {
                 socket.send(
